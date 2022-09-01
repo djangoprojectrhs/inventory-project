@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'cbvapp/base.html '%}
+
+  {% block body_block %}
+  <div class="jumbotron text-light rounded">
+    <h1>Check-Out Cloth details</h1><hr>
+    <ul>
+      <li>Brand Name : {{cloth.name}}</li>
+      <li>Color : {{cloth.color}}</li>
+      <li>Size : {{cloth.size}}</li>
+      <li>Price : {{cloth.price}}</li>
+    </ul>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/update/{{cloth.id}}" class="btn btn-warning btn-lg text-white" role="button">Update</a>&nbsp&nbsp&nbsp<a href="/" class="btn btn-primary btn-lg text-white" role="button">Home</a><br><br>
+  </div>
+  {% endblock %}

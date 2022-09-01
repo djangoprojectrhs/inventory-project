@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'cbvapp/base.html '%}
+
+  {% block body_block %}
+  <div class="jumbotron text-light rounded" align="center">
+    <h1>Brand Name : {{cloth.name}}</h1><hr>
+    <h2>Are you sure wat to delete the records permanently ?</h2><br>
+    <form method="post">
+      {% csrf_token %}
+      <input type="submit" class="btn btn-danger btn-lg text-white" value="Delete">&nbsp&nbsp&nbsp&nbsp
+      <a href="/" class="btn btn-primary btn-lg text-white">Cancel</a><br><br><br>
+
+    </form>
+
+  </div>
+  {% endblock %}
